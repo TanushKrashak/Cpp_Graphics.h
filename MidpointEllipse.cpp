@@ -16,7 +16,7 @@ int main() {
 	float rx = 50, ry = 80, x = 0, y = ry; // Radius along x and y axis and initial point
 
 	// Part 1
-	float p = pow(ry, 2) - ry * pow(rx, 2) + pow(rx, 2) / 4; // Initial decision parameter
+	float p = pow(ry, 2) - ry*pow(rx, 2) + pow(rx, 2)/4; // Initial decision parameter
 	do {
 		putpixel( x + offX,  y + offY, WHITE);
 		putpixel(-x + offX,  y + offY, WHITE);
