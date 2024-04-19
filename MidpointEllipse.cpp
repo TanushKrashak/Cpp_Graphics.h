@@ -28,6 +28,7 @@ int main() {
 			p += 2*x*pow(ry, 2) - 2*y*pow(rx, 2) + pow(ry, 2);
 		}		
 	} while (2*x*pow(ry, 2) < 2*y*pow(rx, 2));
+	
 	// Part 2
 	p = pow(ry, 2)*pow(x+0.5, 2) + pow(rx, 2)*pow(y-1, 2) - pow(rx, 2)*pow(ry, 2);
 	do {
