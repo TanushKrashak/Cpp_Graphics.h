@@ -4,9 +4,9 @@
 
 using namespace std;
 
-// ====================================
-//			Main Algorithm
-//======================================
+// ========================================
+//	Main Algorithm 
+//=========================================
 
 void floodfill(int x, int y, int newcolor, int oldcolor) {
 	if (getpixel(x, y) == oldcolor) {
@@ -18,9 +18,9 @@ void floodfill(int x, int y, int newcolor, int oldcolor) {
 	}	
 }
 
-// ====================================
-//		Main Algorithm End
-//======================================
+// ========================================
+//	Main Algorithm End
+//=========================================
 
 int main() {
 	int gd = DETECT, gm;
