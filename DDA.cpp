@@ -18,7 +18,7 @@ int main() {
 	initwindow(650, 500);
 
 // =====================================
-//			Main Algorithm
+//	Main Algorithm
 //======================================
 		
 	cout << "Enter starting coordinates: ";
@@ -41,7 +41,7 @@ int main() {
 	}
 
 // =====================================
-//		Main Algorithm End
+//	Main Algorithm End
 //======================================
 
 	getch();
