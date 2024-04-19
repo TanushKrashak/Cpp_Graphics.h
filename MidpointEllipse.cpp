@@ -1,9 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include "graphics.h"
-
 using namespace std;
-
 int main() {
 	int gd = DETECT, gm;
 	initwindow(650, 500);
@@ -23,13 +21,13 @@ int main() {
 		putpixel( x + offX, -y + offY, WHITE);
 		putpixel(-x + offX, -y + offY, WHITE);
 		x++;
-		p += 2*x*pow(ry, 2) + pow(ry, 2);
-		if (p >= 0) {
+		if (p < 0)
+			p += 2*x*pow(ry, 2) + pow(ry, 2);
+		else {
 			y--;
-			p -= 2*y*pow(rx, 2);
+			p += 2*x*pow(ry, 2) - 2*y*pow(rx, 2) + pow(ry, 2);
 		}		
 	} while (2*x*pow(ry, 2) < 2*y*pow(rx, 2));
-
 	// Part 2
 	p = pow(ry, 2)*pow(x+0.5, 2) + pow(rx, 2)*pow(y-1, 2) - pow(rx, 2)*pow(ry, 2);
 	do {
@@ -38,10 +36,11 @@ int main() {
 		putpixel( x + offX, -y + offY, WHITE);
 		putpixel(-x + offX, -y + offY, WHITE);
 		y--;
-		p += -2*y*pow(rx, 2) + pow(rx, 2);
-		if (p <= 0) {
+		if (p > 0)
+			p -= 2*y*pow(rx, 2) + pow(rx, 2);
+		else {
 			x++;
-			p += 2*x*pow(ry, 2);
+			p += 2*x*pow(ry, 2) - 2*y*pow(rx, 2) + pow(rx, 2);
 		}
 	} while (y >= 0);
 	
