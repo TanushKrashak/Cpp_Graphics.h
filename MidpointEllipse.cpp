@@ -7,6 +7,11 @@ using namespace std;
 int main() {
 	int gd = DETECT, gm;
 	initwindow(650, 500);
+	
+// ========================================
+//	Main Algorithm 
+//=========================================
+	
 	int offX = 300, offY = 250; // Offset for centering the ellipse
 	float rx = 50, ry = 80, x = 0, y = ry; // Radius along x and y axis and initial point
 
@@ -41,7 +46,11 @@ int main() {
 			p += 2*x*pow(ry, 2) - 2*y*pow(rx, 2) + pow(rx, 2);
 		}
 	} while (y >= 0);
-
+	
+// ========================================
+//	Main Algorithm End
+//=========================================
+	
 	getch();
 	closegraph();
 	return 0;
