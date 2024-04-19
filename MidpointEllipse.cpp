@@ -23,11 +23,10 @@ int main() {
 		putpixel( x + offX, -y + offY, WHITE);
 		putpixel(-x + offX, -y + offY, WHITE);
 		x++;
-		if (p < 0)
-			p += 2*x*pow(ry, 2) + pow(ry, 2);
-		else {
+		p += 2*x*pow(ry, 2) + pow(ry, 2);
+		if (p >= 0) {
 			y--;
-			p += 2*x*pow(ry, 2) - 2*y*pow(rx, 2) + pow(ry, 2);
+			p -= 2*y*pow(rx, 2);
 		}		
 	} while (2*x*pow(ry, 2) < 2*y*pow(rx, 2));
 
@@ -39,11 +38,10 @@ int main() {
 		putpixel( x + offX, -y + offY, WHITE);
 		putpixel(-x + offX, -y + offY, WHITE);
 		y--;
-		if (p > 0)
-			p -= 2*y*pow(rx, 2) + pow(rx, 2);
-		else {
+		p += -2*y*pow(rx, 2) + pow(rx, 2);
+		if (p <= 0) {
 			x++;
-			p += 2*x*pow(ry, 2) - 2*y*pow(rx, 2) + pow(rx, 2);
+			p += 2*x*pow(ry, 2);
 		}
 	} while (y >= 0);
 	
