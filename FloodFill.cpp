@@ -8,13 +8,13 @@ using namespace std;
 //	Main Algorithm 
 //=========================================
 
-void FloodFill(int x, int y, int newcolor, int oldcolor) {
-	if (getpixel(x, y) == oldcolor) {
-		putpixel(x, y, newcolor);		
-		FloodFill(x + 1, y, newcolor, oldcolor);
-		FloodFill(x - 1, y, newcolor, oldcolor);
-		FloodFill(x, y + 1, newcolor, oldcolor);
-		FloodFill(x, y - 1, newcolor, oldcolor);
+void FloodFill(int x, int y, int newColor, int oldColor) {
+	if (getpixel(x, y) == oldColor) {
+		putpixel(x, y, newColor);		
+		FloodFill(x + 1, y, newColor, oldColor);
+		FloodFill(x - 1, y, newColor, oldColor);
+		FloodFill(x, y + 1, newColor, oldColor);
+		FloodFill(x, y - 1, newColor, oldColor);
 	}	
 }
 
