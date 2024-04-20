@@ -32,9 +32,8 @@ int main() {
 	dy = (y2 - y1) / (double)l; // New Change in y
 	double x = x1 + 0.5 * sign(dx); // Initial x
 	double y = y1 + 0.5 * sign(dy); // Initial y
-	for (int i = 0; i < l; i++) {
-		// For Dotted Line
-		if (i % 5 == 0)
+	for (int i = 0; i < l; i++) {		
+		if (i % 5 == 0) // For Dotted Line Only
 			putpixel(int(x), int(y), WHITE);
 		x += dx;
 		y += dy;
