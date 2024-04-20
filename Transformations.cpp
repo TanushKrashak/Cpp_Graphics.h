@@ -1,13 +1,15 @@
 #include <iostream>
 #include "graphics.h"
 #include <cmath>
+
 using namespace std;
+
 int main() {
   int gd = DETECT, gm;
   initwindow(650, 500);
   
   // ========================================
-  //	Main Algorithm End
+  //	Main Algorithm 
   //=========================================
   
   double x1, y1, x2, y2;
@@ -30,7 +32,7 @@ int main() {
   r *= 22.0 / (7.0 * 180);
 
   // Rotation From Origin
-  line(x1 * cos(r) - y1 * sin(r), x1 * sin(r) + y1 * cos(r), x2 * cos(r) - y2 * sin(r), x2 * sin(r) + y2 *
+  line(x1*cos(r) - y1 * sin(r), x1 * sin(r) + y1 * cos(r), x2 * cos(r) - y2 * sin(r), x2 * sin(r) + y2 *
   cos(r));
 
   // Convert to 2 decimal places
