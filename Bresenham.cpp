@@ -17,26 +17,26 @@ int main() {
 	double dx = (x2 - x1);
 	double dy = (y2 - y1);
 	double m = dy / dx;
-	double d = 2*dy - dx;
+	double p = 2*dy - dx;
 	int x = x1, y = y1;
 	while (x <= x2 && y <= y2) {
 		putpixel(x, y, WHITE);
 		if (m < 1) {
 			x++;
-			if (d < 0)
-				d += + 2*dy;
+			if (p < 0)
+				p += + 2*dy;
 			else {
 				y++;
-				d += + 2*dy - 2*dx;
+				p += + 2*dy - 2*dx;
 			}
 		}
 		else {
 			y++;
-			if (d < 0)
-				d += + 2*dx;
+			if (p < 0)
+				p += + 2*dx;
 			else {
 				x++;
-				d += + 2*dx - 2*dy;
+				p += + 2*dx - 2*dy;
 			}
 		}
 	}
