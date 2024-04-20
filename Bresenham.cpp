@@ -17,7 +17,7 @@ int main() {
 	double dx = (x2 - x1);
 	double dy = (y2 - y1);
 	double m = dy / dx;
-	double d = (2 * dy) - dx;
+	double d = 2*dy - dx;
 	int x = x1, y = y1;
 	while (x <= x2 && y <= y2) {
 		putpixel(x, y, WHITE);
