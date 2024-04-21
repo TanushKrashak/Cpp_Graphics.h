@@ -27,26 +27,19 @@ int main() {
 	cout << "Enter shearing factor for Y: ";
 	int shear; cin >> shear;
 	if (coords[0] != coords[2] && coords[0] != coords[4]) {
-		line(coords[0] + offsetX, coords[1] + offsetY, coords[2] + offsetX, coords[3] + offsetY +
-			shear);
-		line(coords[0] + offsetX, coords[1] + offsetY, coords[4] + offsetX, coords[5] + offsetY +
-			shear);
-		line(coords[4] + offsetX, coords[5] + offsetY + shear, coords[2] + offsetX, coords[3] +
-			offsetY + shear);
+		line(coords[0] + offsetX, coords[1] + offsetY, coords[2] + offsetX, coords[3] + offsetY + shear);
+		line(coords[0] + offsetX, coords[1] + offsetY, coords[4] + offsetX, coords[5] + offsetY + shear);
+		line(coords[4] + offsetX, coords[5] + offsetY + shear, coords[2] + offsetX, coords[3] + offsetY + shear);
 	}
 	else if (coords[0] == coords[2]) {
 		line(coords[0] + offsetX, coords[1] + offsetY, coords[2] + offsetX, coords[3] + offsetY);
-		line(coords[0] + offsetX, coords[1] + offsetY, coords[4] + offsetX, coords[5] + offsetY +
-			shear);
-		line(coords[4] + offsetX, coords[5] + offsetY + shear, coords[2] + offsetX, coords[3] +
-			offsetY);
+		line(coords[0] + offsetX, coords[1] + offsetY, coords[4] + offsetX, coords[5] + offsetY + shear);
+		line(coords[4] + offsetX, coords[5] + offsetY + shear, coords[2] + offsetX, coords[3] + offsetY);
 	}
 	else {
-		line(coords[0] + offsetX, coords[1] + offsetY, coords[2] + offsetX, coords[3] + offsetY +
-			shear);
+		line(coords[0] + offsetX, coords[1] + offsetY, coords[2] + offsetX, coords[3] + offsetY + shear);
 		line(coords[0] + offsetX, coords[1] + offsetY, coords[4] + offsetX, coords[5] + offsetY);
-		line(coords[4] + offsetX, coords[5] + offsetY, coords[2] + offsetX, coords[3] + offsetY +
-			shear);
+		line(coords[4] + offsetX, coords[5] + offsetY, coords[2] + offsetX, coords[3] + offsetY + shear);
 		}
 
 	// ========================================
