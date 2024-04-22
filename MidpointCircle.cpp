@@ -2,7 +2,7 @@
 #include <cmath>
 #include "graphics.h"
 
-using namespace st;
+using namespace std;
 
 int main() {
 	int gd = DETECT, gm;
