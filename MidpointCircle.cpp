@@ -27,8 +27,7 @@ int main() {
 		putpixel(-y + midY,  x + midX, WHITE);
 		putpixel(-x + midX, -y + midY, WHITE);
 		putpixel(-y + midY, -x + midX, WHITE);
-		x++;
-		
+		x++;		
 		if (p < 0) 
 			p += 2*x + 1;
 		else {
