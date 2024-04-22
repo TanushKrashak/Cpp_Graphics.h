@@ -28,15 +28,17 @@ int main() {
 		putpixel(-x + midX, -y + midY, WHITE);
 		putpixel(-y + midY, -x + midX, WHITE);
 		x++;
-		p += 2*x + 1;
-		if (p >= 0) {
+		
+		if (p < 0) 
+			p += 2*x + 1;
+		else {
 			y--;
 			p -= 2 * y;
 		}
 	}
 
 // =====================================
-//		Main Algorithm End
+//	\Main Algorithm End
 //======================================
 
 	getch();
