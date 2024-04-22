@@ -9,7 +9,7 @@ int main() {
 	initwindow(650, 500);
 
 // =====================================
-//			Main Algorithm
+//	Main Algorithm
 //======================================
 	
 	cout << " Enter center coordinates : ";
