@@ -5,12 +5,14 @@
 using namespace std;
 
 // =====================================
-//			Main Algorithm
+//	Main Algorithm
 //======================================
 
 void BoundaryFill(int x, int y, int newColor, int boundaryColor) {
-	if (getpixel(x, y) != boundaryColor && getpixel(x, y) != newColor) {
+	// Current Pixel should not be boundary color or new color
+	if (getpixel(x, y) != boundaryColor && getpixel(x, y) != newColor) { 
 		putpixel(x, y, newColor);		
+		// Recursion for all 4 directions
 		BoundaryFill(x + 1, y, newColor, boundaryColor);
 		BoundaryFill(x - 1, y, newColor, boundaryColor);
 		BoundaryFill(x, y + 1, newColor, boundaryColor);
@@ -19,7 +21,7 @@ void BoundaryFill(int x, int y, int newColor, int boundaryColor) {
 }
 
 // =====================================
-//		Main Algorithm End
+//	Main Algorithm End
 //======================================
 
 int main() {
