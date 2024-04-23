@@ -10,18 +10,19 @@ using namespace std;
 
 void BoundaryFill(int x, int y, int newColor, int boundaryColor) {
 	// Current Pixel should not be boundary color or new color
-	if (getpixel(x, y) != boundaryColor && getpixel(x, y) != newColor) { 
-		putpixel(x, y, newColor);		
+	if (getpixel(x, y) != boundaryColor && getpixel(x, y) != newColor) {
+		putpixel(x, y, newColor);
+		delay(1);
 		// Recursion for all 8 directions
 		BoundaryFill(x + 1, y, newColor, boundaryColor);
 		BoundaryFill(x - 1, y, newColor, boundaryColor);
 		BoundaryFill(x, y + 1, newColor, boundaryColor);
 		BoundaryFill(x, y - 1, newColor, boundaryColor);
-    BoundaryFill(y + 1, x, newColor, boundaryColor);
-		BoundaryFill(y - 1, x, newColor, boundaryColor);
-		BoundaryFill(y, x + 1, newColor, boundaryColor);
-		BoundaryFill(y, x - 1, newColor, boundaryColor);
-	}	
+		BoundaryFill(x + 1, y + 1, newColor, boundaryColor);
+		BoundaryFill(x - 1, y + 1, newColor, boundaryColor);
+		BoundaryFill(x + 1, y - 1, newColor, boundaryColor);
+		BoundaryFill(x - 1, y - 1, newColor, boundaryColor);
+	}
 }
 
 // =====================================
