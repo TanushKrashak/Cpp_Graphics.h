@@ -10,7 +10,7 @@ const int x_max = 400, y_max = 300, x_min = 100, y_min = 100; // Window Size
 // Figures out the respective codes for each point
 int calC(int x, int y) {
 	int code = 0;
-	if (x < x_min)
+	if (x < x_min) 
 		code += LEFT;
 	else if (x > x_max)
 		code += RIGHT;
@@ -28,14 +28,14 @@ int calC(int x, int y) {
 
 void CHS(int x1, int y1, int x2, int y2) {
 	int code1 = calC(x1, y1);
-	int code2 = calC(x2, y2);
+	int code2 = calC(x2, y2); 
 	bool accept = false;
 	while (true) {
-		if (!(code1 || code2)) {
-			accept = true;
+		if (!(code1 || code2)) { // Line Fully Inside
+			accept = true; 
 			break;
 		}
-		else if (code1 & code2)
+		else if (code1 & code2) // Line Fully Outside
 			break;
 		else {
 			int code_out = code1 ? code1 : code2;
