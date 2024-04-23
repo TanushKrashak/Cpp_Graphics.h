@@ -33,8 +33,11 @@ int main() {
 	int gd = DETECT, gm;
 	initwindow(650, 500);
 
-	// Draw a circle and fill it with color
+	// Draw a thick circle so that it doesn't cross over while checking diagonally
 	circle(200, 200, 20);
+	circle(200, 200, 21);
+	circle(200, 200, 22);
+	
 	BoundaryFill(200, 200, RED, WHITE);
 
 	getch();
