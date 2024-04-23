@@ -4,9 +4,10 @@
 
 using namespace std;
 
-const int LEFT = 1, RIGHT = 2, BOTTOM = 4, TOP = 8;
-const int x_max = 400, y_max = 300, x_min = 100, y_min = 100;
+const int LEFT = 1, RIGHT = 2, BOTTOM = 4, TOP = 8; // 4 Bit Assignments
+const int x_max = 400, y_max = 300, x_min = 100, y_min = 100; // Window Size
 
+// Figures out the respective codes for each point
 int calC(int x, int y) {
 	int code = 0;
 	if (x < x_min)
