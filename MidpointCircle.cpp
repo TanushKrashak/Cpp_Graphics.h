@@ -15,7 +15,7 @@ int main() {
 	cout << " Enter center coordinates : ";
 	int midX, midY; cin >> midX >> midY;
 	cout<< " Enter Radius: ";
-	int r; cin >> r;
+	int r; cin >> r; // Radius
 	int p = 1-r; // Initial Decision Parameter
 	int x = 0, y = r; // Initial Points
 	while (x <= y) {
