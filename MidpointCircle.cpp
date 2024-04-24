@@ -19,6 +19,7 @@ int main() {
 	int p = 1-r; // Initial Decision Parameter
 	int x = 0, y = r; // Initial Points
 	while (x <= y) {
+		// Printing All 8 points using 8-way Symmetry
 		putpixel( x + midX,  y + midY, WHITE);
 		putpixel( y + midY,  x + midX, WHITE);
 		putpixel(-x + midX,  y + midY, WHITE);
@@ -32,7 +33,7 @@ int main() {
 			p += 2*x + 1; // Increasing Decision Param
 		else {
 			y--;
-			p += 2*x - 2*y + 1;
+			p += 2*x - 2*y + 1; // Decreasing Decision Param
 		}
 	}
 
