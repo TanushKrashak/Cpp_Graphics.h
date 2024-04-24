@@ -29,10 +29,10 @@ int main() {
 		putpixel(-y + midY, -x + midX, WHITE);
 		x++;		
 		if (p < 0) 
-			p += 2*x + 1; // Updating Decision Param
+			p += 2*x + 1; // Increasing Decision Param
 		else {
 			y--;
-			p -= 2 * y; 
+			p += 2*x - 2*y + 1;
 		}
 	}
 
